@@ -73,6 +73,9 @@ class _ConversionFormState extends State<ConversionForm> {
     "xrp",
     "idr",
     "usd",
+    "eur",
+    "gbp",
+    "myr"
   ];
 
   @override
@@ -216,13 +219,13 @@ class _ConversionFormState extends State<ConversionForm> {
         unit2 = parsedJson['rates'][selectCur2]['unit'];
         type2 = parsedJson['rates'][selectCur2]['type'];
 
-        if (selectCur1 == "usd") {
+        if (selectCur1 == "btc") {
           inputCurr = 1.0;
         } else {
           inputCurr = parsedJson['rates'][selectCur1]['value'];
         }
 
-        if (selectCur2 == "usd") {
+        if (selectCur2 == "btc") {
           outputCurr = 1.0;
         } else {
           outputCurr = parsedJson['rates'][selectCur2]['value'];
